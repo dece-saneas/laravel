@@ -18,7 +18,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -58,13 +57,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @role('Super Admin')
                                     <a class="dropdown-item" href="{{ route('core.users.index') }}">
-                                        {{ __('Users') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('core.roles.index') }}">
-                                        {{ __('Roles') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('core.permissions.index') }}">
-                                        {{ __('Permissions') }}
+                                        {{ __('Manage Users') }}
                                     </a>
                                     <div class="dropdown-divider"></div>
                                     @endrole
