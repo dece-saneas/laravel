@@ -38,6 +38,8 @@
                                     <td class="align-middle text-center">
                                         @if(isset($user->roles[0]->name))
                                         <span class="badge badge-pill badge-light py-1 px-2">{{ $user->roles[0]->name }}</span>
+                                        @else
+                                        <span class="badge badge-pill badge-light py-1 px-2">Not specified</span>
                                         @endif
                                     </td>
                                     <td class="align-middle text-center">
