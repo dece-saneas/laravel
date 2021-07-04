@@ -14,12 +14,22 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::create([
-            'name' => 'Super Admin',
-            'email' => 'superadmin@aveasgroup.com',
-            'password' => Hash::make(12345678),
-        ]);
-		
-		$user->assignRole('Super Admin');
+        $users = [
+            0 => [
+                'name' => 'Super Admin',
+                'email' => 'superadmin@mail.com',
+                'role' => 'Super Admin'
+            ]
+        ];
+        
+        foreach ($users as $user) {
+            $newUser = User::create([
+                'name' => $user['name'],
+                'email' => $user['email'],
+                'password' => Hash::make(12345678),
+            ]);
+            
+            $newUser->assignRole($user['role']);
+        }
     }
 }
