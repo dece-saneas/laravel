@@ -29,7 +29,7 @@
                             @foreach ($roles as $no => $role)
                             @if($role->name !== 'Super Admin')
                             <tr>
-                                <th class="align-middle text-center">{{ $no+1+(($roles->currentPage()-1)*10) }}</th>
+                                <th class="align-middle text-center">{{ $no+(($roles->currentPage()-1)*10) }}</th>
                                 <td class="align-middle">{{ $role->name }}</td>
                                 <td class="align-middle text-center">
                                     <form action="{{ route('core.roles.destroy', $role->id) }}" method="POST">

@@ -28,7 +28,7 @@
                         <tbody>
                             @foreach ($permissions as $no => $p)
                             <tr>
-                                <th class="align-middle text-center">{{ $no+1+(($permissions->currentPage()-1)*10) }}</th>
+                                <th class="align-middle text-center">{{ $no+(($permissions->currentPage()-1)*10) }}</th>
                                 <td class="align-middle">{{ $p->name }}</td>
                                 <td class="align-middle text-center">
                                     <form action="{{ route('core.permissions.destroy', $p->id) }}" method="POST">

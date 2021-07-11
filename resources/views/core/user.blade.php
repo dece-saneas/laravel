@@ -32,7 +32,7 @@
                                 @foreach ($users as $no => $user)
                                 @if($user->name !== 'Super Admin')
                                 <tr>
-                                    <th class="align-middle text-center">{{ $no+1+(($users->currentPage()-1)*10) }}</th>
+                                    <th class="align-middle text-center">{{ $no+(($users->currentPage()-1)*10) }}</th>
                                     <td class="align-middle">{{ $user->name }}</td>
                                     <td class="align-middle">{{ $user->email }}</td>
                                     <td class="align-middle text-center">
