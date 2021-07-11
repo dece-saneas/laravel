@@ -20,11 +20,11 @@ class RolesTableSeeder extends Seeder
         ];
         
         foreach ($roles as $role) {
-            $newRole = Role::create([
+            $create = Role::create([
                 'name' => $role['name']
             ]);
             
-            $newRole->syncPermissions($role['permission']);
+            $create->syncPermissions($role['permission']);
         }
     }
 }

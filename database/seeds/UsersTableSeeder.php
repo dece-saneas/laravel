@@ -17,19 +17,19 @@ class UsersTableSeeder extends Seeder
         $users = [
             0 => [
                 'name' => 'Super Admin',
-                'email' => 'superadmin@mail.com',
+                'email' => 'admin.super@mail.com',
                 'role' => 'Super Admin'
             ]
         ];
         
         foreach ($users as $user) {
-            $newUser = User::create([
+            $create = User::create([
                 'name' => $user['name'],
                 'email' => $user['email'],
                 'password' => Hash::make(12345678),
             ]);
             
-            $newUser->assignRole($user['role']);
+            $create->assignRole($user['role']);
         }
     }
 }
